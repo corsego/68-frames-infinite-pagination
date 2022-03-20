@@ -3,7 +3,8 @@ class CommentsController < ApplicationController
 
   # GET /comments or /comments.json
   def index
-    @comments = Comment.all
+    # @comments = Comment.all
+    @pagy, @comments = pagy(Comment.order(created_at: :desc), items: 5)
   end
 
   # GET /comments/1 or /comments/1.json

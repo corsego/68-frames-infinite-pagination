@@ -11,4 +11,7 @@
   <div id="comments" class="min-w-full">
     <%= render @comments %>
   </div>
+  
+  <%== pagy_next_link(@pagy, text: 'More...', link_extra: 'id="next_link"') %>
+
 </div>
