@@ -1,12 +1,17 @@
 <div id="<%= dom_id post %>">
   <p class="my-5">
+    <strong class="block font-medium mb-1">Id:</strong>
+    <%= post.id %>
+  </p>
+
+  <p class="my-5">
     <strong class="block font-medium mb-1">Title:</strong>
     <%= post.title %>
   </p>
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Image url:</strong>
-    <%= post.image_url %>
+    <%= image_tag post.image_url %>
   </p>
 
   <% if action_name != "show" %>
