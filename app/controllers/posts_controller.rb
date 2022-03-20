@@ -5,6 +5,8 @@ class PostsController < ApplicationController
   def index
     # @posts = Post.all
     @pagy, @posts = pagy(Post.order(created_at: :desc), items: 5)
+    
+    render "scrollable_list" if params[:page]
   end
 
   # GET /posts/1 or /posts/1.json
