@@ -12,6 +12,8 @@
     <%= render @comments %>
   </div>
   
-  <%== pagy_next_link(@pagy, text: 'More...', link_extra: 'id="next_link"') %>
-
+  <%#== pagy_next_link(@pagy, text: 'More...', link_extra: 'id="next_link"') %>
+  <div id="load_more_button">
+    <%= button_to "Load more", pagy_url_for(@pagy, @pagy.next) %>
+  </div>
 </div>
