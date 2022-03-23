@@ -12,6 +12,12 @@
   </head>
 
   <body>
+    <div class="p-5">
+      <%= link_to "Posts (Frames autoscroll)", posts_path, class: "bg-zinc-300" %>
+      <br>
+      <%= link_to "Comments (Streams click to show more)", comments_path, class: "bg-zinc-300" %>
+    </div>
+
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>
